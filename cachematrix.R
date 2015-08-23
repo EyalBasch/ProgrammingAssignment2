@@ -1,6 +1,9 @@
 ## R Programming Assignment 2
 ## The following pair of functions should be used to cache and/or calculate the inverse of a matrix 
 
+    ## Please see below a suggested demonstration of the functions
+
+
 ## The first function, makeCacheMatrix creates a special "Square Matrix (2x2)", which is really a list containing a function to
 ## 1. set the value of the Matrix
 ## 2. get the value of the Matrix
@@ -36,3 +39,39 @@ cacheSolve <- function(x, ...) {
     x$setinvmatrix(m)
     m
 }
+
+
+## --Suggested usage of the functions--
+
+    ## create a Matrix
+        ## x<-matrix(c(4,3,3,2),2,2)
+
+    ## Call Function makeCacheMatrix using Matrix x
+        ## mf<-makeCacheMatrix(x)
+
+    ## Show the Matrix
+        ## mf$get()
+        ##     [,1] [,2]
+        ##[1,]    4    3
+        ##[2,]    3    2
+
+    ## Calculate the inverse Matrix using function cacheSolve
+        ## cacheSolve(mf)
+        ##     [,1] [,2]
+        ##[1,]   -2    3
+        ##[2,]    3   -4
+
+    ## Show the cached inverse Matrix
+        ## mf$getinvmatrix()
+        ##     [,1] [,2]
+        ##[1,]   -2    3
+        ##[2,]    3   -4
+
+    ## Use function cacheSolve the second time. This time the value will be retrieved from the cache.
+        ##cacheSolve(mf)
+        ##getting cached data
+        ##     [,1] [,2]
+        ##[1,]   -2    3
+        ##[2,]    3   -4
+
+
